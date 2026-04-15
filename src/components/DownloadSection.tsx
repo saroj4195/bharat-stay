@@ -18,22 +18,10 @@ export default function DownloadSection() {
 
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:items-start">
               <a
-                href={appStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-gold px-6 py-3 text-sm font-semibold text-navy transition-colors duration-200 hover:bg-gold-dark"
-              >
-                <span className="text-xl" aria-hidden="true">🍎</span>
-                <span>
-                  <span className="block text-xs font-normal text-navy/60">Download on the</span>
-                  App Store
-                </span>
-              </a>
-              <a
                 href={playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-navy transition-colors duration-200 hover:bg-white/90"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-gold px-6 py-3 text-sm font-semibold text-navy transition-colors duration-200 hover:bg-gold-dark"
               >
                 <span className="text-xl" aria-hidden="true">▶️</span>
                 <span>

@@ -6,6 +6,7 @@ import FeaturedHotelsSection from "@/components/FeaturedHotelsSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import GallerySection from "@/components/GallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import HotelPartnersSection from "@/components/HotelPartnersSection";
 import DownloadSection from "@/components/DownloadSection";
 
 const homeSeo = siteData.seo.home;
@@ -35,6 +36,7 @@ export default function Home() {
       <FeaturesSection />
       <GallerySection />
       <TestimonialsSection />
+      <HotelPartnersSection />
       <DownloadSection />
     </>
   );
