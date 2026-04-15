@@ -140,7 +140,7 @@ export const siteData: SiteData = {
   navLinks: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Rooms", href: "/#featured-hotels" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Features", href: "/#features" },
     { label: "Gallery", href: "/#gallery" },
     { label: "Support", href: "/support" },
