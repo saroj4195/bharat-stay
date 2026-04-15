@@ -143,7 +143,7 @@ export const siteData: SiteData = {
     { label: "Rooms", href: "/#featured-hotels" },
     { label: "Features", href: "/#features" },
     { label: "Gallery", href: "/#gallery" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Support", href: "/support" },
   ],
 
   hero: {
@@ -351,6 +351,9 @@ export const siteData: SiteData = {
     quickLinks2: [
       { label: "Contact Us", href: "/contact" },
       { label: "Features", href: "/#features" },
+      { label: "FAQ", href: "/support/faq" },
+      { label: "Legal", href: "/support/legal" },
+      { label: "Partner With Us", href: "/support/partner" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
       { label: "Download App", href: "/#download" },
