@@ -138,11 +138,10 @@ export const siteData: SiteData = {
   tagline: "Book Verified Hotels. Save Up to 15%.",
 
   navLinks: [
-    { label: "Home", href: "/" },
+    { label: "Hotels", href: "/#featured-hotels" },
+    { label: "Destinations", href: "/#gallery" },
+    { label: "Why BharatStay", href: "/#features" },
     { label: "About", href: "/about" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Features", href: "/#features" },
-    { label: "Gallery", href: "/#gallery" },
     { label: "Support", href: "/support" },
   ],
 

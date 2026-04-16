@@ -3,26 +3,28 @@ import SectionHeading from "@/components/SectionHeading";
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="bg-white px-6 py-20">
+    <section id="features" className="px-6 py-20" style={{ background: "var(--bg-base)" }}>
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          title="Why Choose Bharatstay?"
-          subtitle="Everything you need to manage bookings, delight guests, and grow your hospitality business."
+          title="Why BharatStay Wins"
+          subtitle="Built for India. Designed for speed. Powered by AI."
         />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {siteData.features.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-xl border border-border bg-off-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
+              className="group rounded-xl p-6 transition-all duration-200 hover:border-[var(--border-brand)]"
+              style={{
+                background: "var(--bg-card)",
+                border: "1px solid var(--border)",
+              }}
             >
-              <span className="text-3xl" aria-hidden="true">
-                {feature.icon}
-              </span>
-              <h3 className="mt-4 text-lg font-semibold text-text-heading">
+              <span className="text-3xl" aria-hidden="true">{feature.icon}</span>
+              <h3 className="mt-4 text-base font-bold" style={{ color: "var(--text-primary)" }}>
                 {feature.title}
               </h3>
-              <p className="mt-2 text-sm text-text-body">
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                 {feature.description}
               </p>
             </div>

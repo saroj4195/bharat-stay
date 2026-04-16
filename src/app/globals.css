@@ -1,37 +1,254 @@
 @import "tailwindcss";
 
-:root {
-  --navy: #1a2332;
-  --navy-light: #243044;
-  --gold: #d4a853;
-  --gold-dark: #c49a47;
-  --white: #ffffff;
-  --off-white: #f8f8f8;
-  --text-body: #555555;
-  --text-heading: #1a2332;
-  --border: #e8e8e8;
+/* ── CYBER SAFFRON DARK THEME (default) ── */
+:root,
+[data-theme="cyber-saffron-dark"] {
+  /* Brand */
+  --color-brand:          #FF6D00;
+  --color-brand-bright:   #FF8A30;
+  --color-brand-dim:      #E05500;
+  --color-cta:            #00BFA5;
+  --color-cta-hover:      #00967D;
+
+  /* Semantic */
+  --color-success:        #00BFA5;
+  --color-urgency:        #FF1744;
+  --color-rating:         #FFD600;
+  --color-pending:        #5B7FA6;
+
+  /* Backgrounds */
+  --bg-base:              #080604;
+  --bg-surface:           #100E08;
+  --bg-card:              #18160E;
+  --bg-elevated:          #221E14;
+  --bg-glass:             rgba(24, 22, 14, 0.75);
+
+  /* Text */
+  --text-primary:         #FFF8F0;
+  --text-secondary:       #C09060;
+  --text-muted:           #604820;
+
+  /* Border */
+  --border:               rgba(255, 248, 240, 0.07);
+  --border-brand:         rgba(255, 109, 0, 0.25);
+
+  /* Tints */
+  --tint-brand:           #2A1000;
+  --tint-cta:             #002820;
+  --tint-urgency:         #2A0008;
+
+  /* Legacy aliases */
+  --navy:                 #18160E;
+  --navy-light:           #221E14;
+  --gold:                 #FF6D00;
+  --gold-dark:            #E05500;
+  --off-white:            #FFF8F0;
+  --text-body:            #C09060;
+  --text-heading:         #FFF8F0;
+  --background:           #080604;
+  --foreground:           #FFF8F0;
+  --primary:              #FF6D00;
+  --primary-dark:         #E05500;
+}
+
+/* ── LIGHT THEME ── */
+[data-theme="cyber-saffron-light"] {
+  --color-brand:          #FF6D00;
+  --color-brand-bright:   #FF8A30;
+  --color-brand-dim:      #E05500;
+  --color-cta:            #00BFA5;
+  --color-cta-hover:      #00967D;
+  --color-success:        #00BFA5;
+  --color-urgency:        #C0392B;
+  --color-rating:         #B8800A;
+  --color-pending:        #5B7FA6;
+
+  --bg-base:              #FFF8F0;
+  --bg-surface:           #FFE8D0;
+  --bg-card:              #FFFCF8;
+  --bg-elevated:          #FFD8B0;
+  --bg-glass:             rgba(255, 248, 240, 0.85);
+
+  --text-primary:         #1E0C00;
+  --text-secondary:       #803000;
+  --text-muted:           #C09060;
+  --border:               rgba(30, 12, 0, 0.08);
+  --border-brand:         rgba(255, 109, 0, 0.3);
+
+  --tint-brand:           #FFD8B0;
+  --tint-cta:             #B0EEE8;
+  --tint-urgency:         #FAD9D5;
+
+  --navy:                 #1E0C00;
+  --navy-light:           #3A1800;
+  --gold:                 #FF6D00;
+  --gold-dark:            #E05500;
+  --off-white:            #FFF8F0;
+  --text-body:            #803000;
+  --text-heading:         #1E0C00;
+  --background:           #FFF8F0;
+  --foreground:           #1E0C00;
+  --primary:              #FF6D00;
+  --primary-dark:         #E05500;
 }
 
 @theme inline {
-  --color-navy: var(--navy);
-  --color-navy-light: var(--navy-light);
-  --color-gold: var(--gold);
-  --color-gold-dark: var(--gold-dark);
-  --color-white: var(--white);
-  --color-off-white: var(--off-white);
-  --color-text-body: var(--text-body);
-  --color-text-heading: var(--text-heading);
-  --color-border: var(--border);
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-dm-sans);
+  /* Brand */
+  --color-brand:          var(--color-brand);
+  --color-brand-bright:   var(--color-brand-bright);
+  --color-brand-dim:      var(--color-brand-dim);
+  --color-cta:            var(--color-cta);
+  --color-cta-hover:      var(--color-cta-hover);
+
+  /* Semantic */
+  --color-success:        var(--color-success);
+  --color-urgency:        var(--color-urgency);
+  --color-rating:         var(--color-rating);
+  --color-pending:        var(--color-pending);
+
+  /* Backgrounds */
+  --color-bg-base:        var(--bg-base);
+  --color-bg-surface:     var(--bg-surface);
+  --color-bg-card:        var(--bg-card);
+  --color-bg-elevated:    var(--bg-elevated);
+
+  /* Text */
+  --color-text-primary:   var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted:     var(--text-muted);
+
+  /* Tints */
+  --color-tint-brand:     var(--tint-brand);
+  --color-tint-cta:       var(--tint-cta);
+  --color-tint-urgency:   var(--tint-urgency);
+
+  /* Legacy */
+  --color-navy:           var(--navy);
+  --color-navy-light:     var(--navy-light);
+  --color-gold:           var(--gold);
+  --color-gold-dark:      var(--gold-dark);
+  --color-off-white:      var(--off-white);
+  --color-border:         var(--border);
+  --color-text-body:      var(--text-body);
+  --color-text-heading:   var(--text-heading);
+
+  /* Fonts */
+  --font-heading:         var(--font-playfair);
+  --font-body:            var(--font-dm-sans);
 }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--white);
-  color: var(--text-body);
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-html {
-  scroll-behavior: smooth;
+/* ── GLASSMORPHISM ── */
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+/* ── GLOW EFFECTS ── */
+.glow-brand {
+  box-shadow: 0 0 24px rgba(255, 109, 0, 0.35), 0 0 60px rgba(255, 109, 0, 0.12);
+}
+.glow-cta {
+  box-shadow: 0 0 24px rgba(0, 191, 165, 0.35), 0 0 60px rgba(0, 191, 165, 0.12);
+}
+.glow-urgency {
+  box-shadow: 0 0 16px rgba(255, 23, 68, 0.4);
+}
+
+/* ── GRADIENT TEXT ── */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6D00 0%, #FF8A30 50%, #00BFA5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-brand {
+  background: linear-gradient(135deg, #FF6D00, #FF8A30);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── GRID BACKGROUND ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 109, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 109, 0, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+.pulse-dot { animation: pulseDot 2s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.float { animation: float 4s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,109,0,0.15) 50%, transparent 100%);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(255, 109, 0, 0.2); }
+  50% { border-color: rgba(0, 191, 165, 0.4); }
+}
+.border-animated { animation: borderGlow 3s ease-in-out infinite; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: rgba(255, 109, 0, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 109, 0, 0.5); }
+
+/* ── URGENCY BADGE ── */
+.urgency-badge {
+  background: var(--tint-urgency);
+  color: var(--color-urgency);
+  border: 1px solid rgba(255, 23, 68, 0.3);
+}
+
+/* ── CTA BUTTON ── */
+.btn-cta {
+  background: var(--color-cta);
+  color: #fff;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-cta:hover {
+  background: var(--color-cta-hover);
+  box-shadow: 0 0 20px rgba(0, 191, 165, 0.4);
+}
+
+/* ── BRAND BUTTON ── */
+.btn-brand {
+  background: var(--color-brand);
+  color: #fff;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-brand:hover {
+  background: var(--color-brand-bright);
+  box-shadow: 0 0 20px rgba(255, 109, 0, 0.4);
 }

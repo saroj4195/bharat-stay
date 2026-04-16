@@ -5,25 +5,35 @@ export default function Footer() {
   const { footer } = siteData;
 
   return (
-    <footer className="bg-navy text-white">
+    <footer style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border)" }}>
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           {/* Column 1: Brand */}
           <div>
-            <h3 className="font-heading text-lg font-bold text-white italic">{siteData.brand}</h3>
-            <p className="mt-2 text-sm text-white/60">
+            <div className="flex items-center gap-2">
+              <div
+                className="flex h-8 w-8 items-center justify-center rounded-lg font-bold text-white text-sm"
+                style={{ background: "linear-gradient(135deg, var(--color-brand), var(--color-cta))" }}
+              >
+                B
+              </div>
+              <span className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>
+                Bharat<span style={{ color: "var(--color-brand)" }}>Stay</span>
+              </span>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               {footer.brandDescription}
             </p>
-            <p className="mt-3 text-xs text-white/40">{footer.address}</p>
+            <p className="mt-3 text-xs" style={{ color: "var(--text-muted)" }}>{footer.address}</p>
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-gold">Quick Links</h4>
-            <ul className="mt-3 space-y-2 text-sm text-white/60">
+            <h4 className="text-sm font-semibold" style={{ color: "var(--color-brand)" }}>Quick Links</h4>
+            <ul className="mt-3 space-y-2 text-sm" style={{ color: "var(--text-secondary)" }}>
               {footer.quickLinks1.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors duration-200 hover:text-gold">
+                  <Link href={link.href} className="transition-colors duration-200 hover:text-[var(--color-brand)]">
                     {link.label}
                   </Link>
                 </li>
@@ -31,13 +41,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: More Links */}
+          {/* Column 3: Support */}
           <div>
-            <h4 className="text-sm font-semibold text-gold">Support</h4>
-            <ul className="mt-3 space-y-2 text-sm text-white/60">
+            <h4 className="text-sm font-semibold" style={{ color: "var(--color-brand)" }}>Support</h4>
+            <ul className="mt-3 space-y-2 text-sm" style={{ color: "var(--text-secondary)" }}>
               {footer.quickLinks2.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors duration-200 hover:text-gold">
+                  <Link href={link.href} className="transition-colors duration-200 hover:text-[var(--color-brand)]">
                     {link.label}
                   </Link>
                 </li>
@@ -45,10 +55,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact & Social */}
+          {/* Column 4: Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-gold">Contact</h4>
-            <ul className="mt-3 space-y-2 text-sm text-white/60">
+            <h4 className="text-sm font-semibold" style={{ color: "var(--color-brand)" }}>Contact</h4>
+            <ul className="mt-3 space-y-2 text-sm" style={{ color: "var(--text-secondary)" }}>
               <li>📞 {footer.phone}</li>
               <li>✉️ {footer.email}</li>
             </ul>
@@ -69,8 +79,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/40">
-          &copy; {new Date().getFullYear()} {siteData.brand}. All rights reserved.
+        <div className="mt-10 pt-6 text-center text-xs" style={{ borderTop: "1px solid var(--border)", color: "var(--text-muted)" }}>
+          &copy; {new Date().getFullYear()} {siteData.brand}. All rights reserved. &nbsp;|&nbsp; Zero Commission. Zero Platform Fee. Always.
         </div>
       </div>
     </footer>

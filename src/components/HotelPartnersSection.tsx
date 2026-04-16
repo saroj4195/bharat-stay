@@ -1,52 +1,46 @@
-import SectionHeading from "@/components/SectionHeading";
-
-const benefits = [
-  {
-    icon: "💰",
-    title: "Zero Commission, Zero Platform Fee",
-    description:
-      "Keep 100% of your booking revenue. No commission cuts, no hidden platform charges — every rupee your guest pays goes directly to you.",
-  },
-  {
-    icon: "🛠️",
-    title: "Free Tools Worth ₹15K/Month",
-    description:
-      "Get a free Channel Manager (up to 4 OTA connections), free Booking Engine, and free basic PMS — tools you currently pay ₹10K–15K/month for.",
-  },
-];
+import Link from "next/link";
 
 export default function HotelPartnersSection() {
   return (
-    <section id="hotel-partners" className="bg-navy px-6 py-20">
+    <section id="hoteliers" className="px-6 py-20" style={{ background: "var(--bg-base)" }}>
       <div className="mx-auto max-w-5xl">
-        <SectionHeading
-          title="For Hotel Partners"
-          subtitle="Join 1,400+ hotels already growing with BharatStay. Zero cost to you — we make money only when your guests are happy."
-          dark
-        />
+        <div className="mb-10 text-center">
+          <h2 className="text-3xl font-bold" style={{ color: "var(--text-primary)" }}>
+            Are You a Hotel Owner?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-lg" style={{ color: "var(--text-secondary)" }}>
+            Join 1,400+ hotels earning more with zero commission and free tools.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {benefits.map((b) => (
-            <div
-              key={b.title}
-              className="rounded-xl border border-white/10 bg-white/5 p-8 transition-all duration-200 hover:bg-white/10"
-            >
-              <span className="text-4xl">{b.icon}</span>
-              <h3 className="mt-4 text-lg font-bold text-white">{b.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">
-                {b.description}
-              </p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="rounded-xl p-6 text-center" style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
+            <span className="text-4xl">💰</span>
+            <h3 className="mt-3 font-bold" style={{ color: "var(--text-primary)" }}>Zero Commission</h3>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-secondary)" }}>Keep 100% of every booking. No cuts, no platform fees — ever.</p>
+          </div>
+          <div className="rounded-xl p-6 text-center" style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
+            <span className="text-4xl">🛠️</span>
+            <h3 className="mt-3 font-bold" style={{ color: "var(--text-primary)" }}>Free Tools</h3>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-secondary)" }}>Free Channel Manager, Booking Engine & PMS — worth ₹15K/month.</p>
+          </div>
+          <div className="rounded-xl p-6 text-center" style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
+            <span className="text-4xl">👥</span>
+            <h3 className="mt-3 font-bold" style={{ color: "var(--text-primary)" }}>Own Your Guests</h3>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-secondary)" }}>Get direct guest data — email, phone, history. OTAs hide this from you.</p>
+          </div>
         </div>
 
         <div className="mt-10 text-center">
-          <a
-            href="/contact"
-            className="inline-flex min-h-[44px] items-center rounded-lg bg-gold px-8 py-3 text-sm font-bold text-navy transition-colors duration-200 hover:bg-gold-dark"
+          <Link
+            href="/for-hotels"
+            className="btn-brand inline-flex min-h-[44px] items-center rounded-lg px-8 py-3 text-sm font-bold"
           >
-            Partner With Us →
-          </a>
+            See Plans & Pricing for Hotels →
+          </Link>
+          <p className="mt-3 text-xs" style={{ color: "var(--text-muted)" }}>
+            Free forever plan available. No credit card required.
+          </p>
         </div>
       </div>
     </section>

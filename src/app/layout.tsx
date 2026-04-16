@@ -1,37 +1,39 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OfferPopup from "@/components/OfferPopup";
+import ThemeProvider from "@/components/ThemeProvider";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-dm-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "BharatStay — Verified Hotels, Genuinely Cheaper Prices",
+  title: "BharatStay — AI-Powered Hotel Booking. Zero Commission.",
   description:
-    "Book verified hotels across India at 10-15% lower prices. BharatStay partners directly with hotels — no middlemen, no hidden charges.",
+    "Book verified hotels near railway stations across India. AI-powered search, zero commission, zero platform fee. Save 10-15% vs OTAs.",
   openGraph: {
-    title: "BharatStay — Verified Hotels, Genuinely Cheaper Prices",
+    title: "BharatStay — AI-Powered Hotel Booking. Zero Commission.",
     description:
-      "Book verified hotels across India at 10-15% lower prices. BharatStay partners directly with hotels — no middlemen, no hidden charges.",
+      "Book verified hotels near railway stations across India. AI-powered search, zero commission, zero platform fee.",
     url: "https://bharatstay.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BharatStay — Verified Hotels, Genuinely Cheaper Prices",
+    title: "BharatStay — AI-Powered Hotel Booking. Zero Commission.",
     description:
-      "Book verified hotels across India at 10-15% lower prices. BharatStay partners directly with hotels — no middlemen, no hidden charges.",
+      "Book verified hotels near railway stations across India. AI-powered search, zero commission, zero platform fee.",
   },
 };
 
@@ -43,13 +45,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
+      data-theme="cyber-saffron-light"
+      className={`${spaceGrotesk.variable} ${inter.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <OfferPopup />
+      <body className="flex min-h-full flex-col antialiased" style={{ background: "var(--bg-base)", color: "var(--text-primary)" }}>
+        <ThemeProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <OfferPopup />
+        </ThemeProvider>
       </body>
     </html>
   );
